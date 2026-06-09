@@ -10,17 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy to VPS
+      - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            set -e
+
+            echo "🚀 START DEPLOY"
+
             cd /var/www/kursusweb/frontend
-            git pull origin main
+
+            echo "🧹 CLEAN REPO"
+            git fetch origin
+            git reset --hard origin/main
+            git clean -fd
+
+            echo "📦 CHECK NODE"
+            export PATH=$PATH:/usr/bin:/usr/local/bin
+            node -v
+            npm -v
+
+            echo "📥 INSTALL DEPENDENCIES"
             npm install
+
+            echo "🏗 BUILD REACT"
             npm run build
+
+            echo "✅ DEPLOY SUCCESS"
