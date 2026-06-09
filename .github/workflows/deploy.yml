@@ -28,8 +28,15 @@ jobs:
             git reset --hard origin/main
             git clean -fd
 
-            echo "📦 CHECK NODE"
+            echo "📦 LOAD NVM & ENVIRONMENT"
+            # 1. Muat konfigurasi shell bawaan VPS agar path bawaan terbaca
             export PATH=$PATH:/usr/bin:/usr/local/bin
+            
+            # 2. Muat NVM (Node Version Manager) secara manual jika Anda menggunakannya
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+            echo "🔍 CHECK NODE VERSION"
             node -v
             npm -v
 
