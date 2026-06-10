@@ -148,7 +148,56 @@ export default function App() {
           </div>
         </div>
       </section>
+   {/*    Curiculum session */}
 
+   {/* 3.5 FEATURES & BENEFITS SECTION */}
+      <section id="features" className="py-20 bg-slate-950/40 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Why Learn With <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">ITKomputer</span>?
+            </h2>
+            <p className="text-slate-400">
+              We don't just teach code. We provide an exclusive premium learning ecosystem built for your absolute success.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/20 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                🎯
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">1-on-1 Dedicated Sesi</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Zero distractions. The entire class duration is 100% focused on your project, your screen, and your learning pace. No generic group webinars.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/20 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                🚀
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Real-World Production Case</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Skip the boring theories. You will build and scale production-ready systems, handle real runtime bugs, and deal with security configurations.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/20 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                ⚡
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Post-Class Code Review</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Gain exclusive access to private repository reviews. Get professional code refactoring advice to ensure your build is clean and performant.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* 4. HOURLY RATE CALCULATOR SECTION */}
       <section id="calculator" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
